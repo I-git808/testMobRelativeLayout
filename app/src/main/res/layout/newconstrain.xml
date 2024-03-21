@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/txtView100"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FF8800"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="100%"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtView75"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88FF88"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="75%"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtView100"
+        app:layout_constraintWidth_percent="0.75"/>
+
+    <TextView
+        android:id="@+id/txtView50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#FF0088"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="50%"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtView75"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <View
+        android:id="@+id/monitor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#8888FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,0.3"
+        app:layout_constraintEnd_toEndOf="@id/txtView50"
+        app:layout_constraintStart_toStartOf="@id/txtView50"
+        app:layout_constraintTop_toBottomOf="@id/txtView50"/>
+
+    <View
+        android:id="@+id/point01"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="40dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/point02"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Space
+        android:id="@+id/frontier01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/point02"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toEndOf="@id/point01"
+        app:layout_constraintTop_toTopOf="@id/point01"/>
+
+    <Space
+        android:id="@+id/frontier02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/point01"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintEnd_toStartOf="@id/point02"
+        app:layout_constraintTop_toTopOf="@id/point02"/>
+
+    <TextView
+        android:id="@+id/txt80"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#009999"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="constrained 90%"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/point01"
+        app:layout_constraintEnd_toStartOf="@id/frontier02"
+        app:layout_constraintStart_toEndOf="@id/frontier01"
+        app:layout_constraintTop_toTopOf="@id/point01"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
