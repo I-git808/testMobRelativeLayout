@@ -166,7 +166,6 @@
             android:gravity="center"
             android:text="TXT in Frame"
             android:textColor="@color/white"/>
-
     </FrameLayout>
 
 </RelativeLayout>
